@@ -4,6 +4,8 @@
 
 This is a mockup layout for a dashboard controller for a generic site.
 
+See a live preview of the site [here](https://charlie-daniels.github.io/admin-page/).
+
 This was made as part of [The Odin Project](https://www.theodinproject.com/about).
 
 ## Credits
