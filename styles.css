@@ -18,6 +18,11 @@ ul {
     list-style: none;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 /*  */
 
 h1 {
@@ -56,6 +61,8 @@ img {
 .header {  
     display: grid;
     grid-template: 1fr 1fr / repeat(auto-fit, minmax(min(100%, max(250px, 50%)), 1fr));
+    padding: 1rem;
+    box-shadow: 0 5px 0 20px black;
 }
 
 .header * {
@@ -64,12 +71,12 @@ img {
     justify-content: flex-start;
 }
 
-.header > div {
-    margin: .5rem;
-}
-
 .header img {
     margin: 0 .5rem 0 0;
+}
+
+.header input {
+    width: 80%;
 }
 
 .header > .account-settings {
@@ -114,6 +121,10 @@ img {
     margin: 1rem;
 }
 
+.dashboard p {
+    color: #ffffffba
+}
+
 .item-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
@@ -133,6 +144,16 @@ img {
 .item .options {
     justify-self: flex-end;
     align-self: flex-end;
+}
+
+.options .favourite:hover {
+    transform: scale(1.2);
+    content:url(images/favourite-selected.svg);
+}
+
+.options .watch:hover {
+    transform: scale(1.2);
+    content:url(images/watch-selected.svg);
 }
 
 .projects {
@@ -156,6 +177,9 @@ img {
 .side-wrapper, .item {
     background-color: #78716c;
     border-radius: var(--global-radius);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: 4px solid #fdba74;
 }
 
 .trending {
@@ -170,12 +194,13 @@ img {
 
 .trending p {
     margin: 0;
-    margin-left: .5rem;
 }
 
 .trending .item {
+    border: none;
     padding: 0;
     grid-template: auto 1fr / .2fr 1fr;
+    gap: .5rem;
 }
 
 .trending .user-profile-picture {
@@ -197,7 +222,7 @@ img {
     display: grid;
     grid-template-rows: 50px 15em 20px auto;
     grid-template-columns: 160px;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 .sidebar h2 {
@@ -221,6 +246,7 @@ li {
     display: flex;
     justify-content: center;
     grid-row: 1 / span 1;
+    color: #fdba74;
 }
 
 #logo > img {
